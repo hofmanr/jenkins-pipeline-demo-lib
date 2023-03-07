@@ -1,10 +1,10 @@
 def call() {
     node {
       sh '''
-        git version
-        docker version
-        dotnet --list-sdks
-        dotnet --list-runtimes
+       git version
+       java -version
+       echo "M2_HOME = ${M2_HOME}"
+       ${M2_HOME}/bin/mvn --version
       '''
     }
 }
